@@ -20,7 +20,7 @@ public class Colegio {
 	public float obtienePrecioTotalMatriculaEstudiante(Estudiante e) {
 		float precioTotal = 0f;
 		for (Asignatura asignatura : e.getListaAsignaturas()) {
-			precioTotal = +asignatura.getPrecio();
+			precioTotal = precioTotal +asignatura.getPrecio();
 		}
 		return precioTotal;
 	}
@@ -30,7 +30,7 @@ public class Colegio {
 		float presupuesto = 0f;
 		for (Estudiante estudiante : listaEstudiantes) {
 			for (Asignatura asignatura : estudiante.getListaAsignaturas()) {
-				presupuesto = +asignatura.getPrecio();
+				presupuesto = presupuesto +asignatura.getPrecio();
 			}
 		}
 		return PRESUPUESTO_INICIAL + presupuesto;
@@ -62,17 +62,41 @@ public class Colegio {
 
 		for (Profesor profesor : listaProfesores) {
 
-			sueldoTotal = +profesor.getSalario();
+			sueldoTotal = sueldoTotal +profesor.getSalario();
 		}
 		return sueldoTotal;
 	}
 
-	private float obtienePresupuestoNetoColegio() throws ColegioExcepcion {
+	public float obtienePresupuestoNetoColegio() throws ColegioExcepcion {
 		float presupuestoTotalNeto = obtienePresupuestoColegio() - obtieneSueldoTotalProfesores();
 		if (presupuestoTotalNeto < 0)
 			throw new ColegioExcepcion("Presupuesto negativo");
 		else
 			return presupuestoTotalNeto;
+	}
+
+	public List<Estudiante> getListaEstudiantes() {
+		return listaEstudiantes;
+	}
+
+	public void setListaEstudiantes(List<Estudiante> listaEstudiantes) {
+		this.listaEstudiantes = listaEstudiantes;
+	}
+
+	public List<Profesor> getListaProfesores() {
+		return listaProfesores;
+	}
+
+	public void setListaProfesores(List<Profesor> listaProfesores) {
+		this.listaProfesores = listaProfesores;
+	}
+
+	public List<Asignatura> getListaAsignaturas() {
+		return listaAsignaturas;
+	}
+
+	public void setListaAsignaturas(List<Asignatura> listaAsignaturas) {
+		this.listaAsignaturas = listaAsignaturas;
 	}
 
 }

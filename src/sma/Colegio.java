@@ -99,4 +99,11 @@ public class Colegio {
 		this.listaAsignaturas = listaAsignaturas;
 	}
 
+	@Override
+	public String toString() {
+		return "Colegio [listaEstudiantes=" + listaEstudiantes + ", listaProfesores=" + listaProfesores
+				+ ", listaAsignaturas=" + listaAsignaturas + "]";
+	}
+	
+
 }

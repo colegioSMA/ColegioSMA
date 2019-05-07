@@ -58,6 +58,11 @@ public class Asignatura {
 			return false;
 		}
 	}
+	@Override
+	public String toString() {
+		return "Asignatura [identificador=" + identificador + ", nombre=" + nombre + ", precio=" + precio
+				+ ", profesor=" + profesor + "]";
+	}
 	
 	
 }

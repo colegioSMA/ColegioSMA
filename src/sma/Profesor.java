@@ -28,6 +28,11 @@ public class Profesor extends Persona{
 				}
 				return false;
 	}
+
+	@Override
+	public String toString() {
+		return "Profesor [salario=" + salario + "]";
+	}
 	
 	
 }

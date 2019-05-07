@@ -31,6 +31,11 @@ public class Estudiante extends Persona{
 				}
 				return false;
 	}
+
+	@Override
+	public String toString() {
+		return "Estudiante [listaAsignaturas=" + listaAsignaturas + "]";
+	}
 	
 	
 }

@@ -67,7 +67,7 @@ public class Colegio {
 		return sueldoTotal;
 	}
 
-	private float obtienePresupuestoNetoColegio() throws ColegioExcepcion {
+	public float obtienePresupuestoNetoColegio() throws ColegioExcepcion {
 		float presupuestoTotalNeto = obtienePresupuestoColegio() - obtieneSueldoTotalProfesores();
 		if (presupuestoTotalNeto < 0)
 			throw new ColegioExcepcion("Presupuesto negativo");

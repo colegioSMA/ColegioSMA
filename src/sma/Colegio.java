@@ -22,6 +22,7 @@ public class Colegio {
 		for (Asignatura asignatura : e.getListaAsignaturas()) {
 			precioTotal = precioTotal+asignatura.getPrecio();
 		}
+		System.out.println(precioTotal);
 		return precioTotal;
 	}
 

@@ -75,4 +75,28 @@ public class Colegio {
 			return presupuestoTotalNeto;
 	}
 
+	public List<Estudiante> getListaEstudiantes() {
+		return listaEstudiantes;
+	}
+
+	public void setListaEstudiantes(List<Estudiante> listaEstudiantes) {
+		this.listaEstudiantes = listaEstudiantes;
+	}
+
+	public List<Profesor> getListaProfesores() {
+		return listaProfesores;
+	}
+
+	public void setListaProfesores(List<Profesor> listaProfesores) {
+		this.listaProfesores = listaProfesores;
+	}
+
+	public List<Asignatura> getListaAsignaturas() {
+		return listaAsignaturas;
+	}
+
+	public void setListaAsignaturas(List<Asignatura> listaAsignaturas) {
+		this.listaAsignaturas = listaAsignaturas;
+	}
+
 }

@@ -1,4 +1,4 @@
-package sma;
+package SMA;
 
 public class Profesor extends Persona{
 

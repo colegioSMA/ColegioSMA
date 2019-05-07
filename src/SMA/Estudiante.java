@@ -1,4 +1,4 @@
-package sma;
+package SMA;
 
 import java.util.List;
 

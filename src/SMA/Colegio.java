@@ -1,12 +1,17 @@
-package sma;
+package SMA;
 
 import java.util.List;
 
-public class Colegio {
 
-	private List<Estudiante> listaEstudiantes = null;
-	private List<Profesor> listaProfesores = null;
-	private List<Asignatura> listaAsignaturas = null;
+public class Colegio {
+	public static void main(String [] args) {
+		
+		
+	}
+
+	public List<Estudiante> listaEstudiantes = null;
+	public List<Profesor> listaProfesores = null;
+	public List<Asignatura> listaAsignaturas = null;
 	public static final int PRESUPUESTO_INICIAL = 5000;
 
 	public Colegio(List<Estudiante> listaEstudiantes, List<Profesor> listaProfesores,
@@ -17,11 +22,13 @@ public class Colegio {
 		this.listaAsignaturas = listaAsignaturas;
 	}
 
-	public float obtienePrecioTotalMatriculaEstudiante(Estudiante e) {
+	public  float obtienePrecioTotalMatriculaEstudiante(Estudiante e) {
 		float precioTotal = 0f;
 		for (Asignatura asignatura : e.getListaAsignaturas()) {
 			precioTotal = precioTotal+asignatura.getPrecio();
+			
 		}
+		System.out.println(precioTotal);
 		return precioTotal;
 	}
 

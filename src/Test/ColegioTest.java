@@ -144,16 +144,16 @@ public class ColegioTest {
 
 	}
 	
-	@Test(expected = ColegioExcepcion.class)
-	public void obtienePresupuestoNetoColegioTest() {
-			
-			try {
-				assertEquals(2100, (int)colegio.obtienePresupuestoNetoColegio(), 0.01);
-			} catch (ColegioExcepcion e) {
-				
-			}
-	
+	@Test(expected = Exception.class)
+	public void obtienePresupuestoNetoColegioTest() throws ColegioExcepcion {
+		
+		
+		colegio.anadeProfesor(profe2);
+		colegio.anadeProfesor(profe3);
 
+		System.out.println(colegio.obtienePresupuestoNetoColegio());
+
+		
 	}
-	
+
 }
